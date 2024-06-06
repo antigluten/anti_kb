@@ -37,3 +37,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             _______, KC_EXLM,      _______
             ),
 };
+
+#ifdef OLED_ENABLE
+
+#define ORIENTATION OLED_ROTATION_180
+
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+    return ORIENTATION;
+}
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return ORIENTATION;
+}
+
+void render_layer_state(void) {
+    oled_write_ln_P(PSTR("artsey.io\n"), false);
+}
+
+bool oled_task_user(void) {
+    render_layer_state();
+    return true;
+}
+
+#endif

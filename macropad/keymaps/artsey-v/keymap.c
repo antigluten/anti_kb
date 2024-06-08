@@ -1,5 +1,37 @@
 #include QMK_KEYBOARD_H
 
+bool     is_alt_tab_active = false;
+uint16_t alt_tab_timer      = 0;
+
+enum custom_keycodes {
+    ALT_TAB = QK_KB_0,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) { // This will do most of the grunt work with the keycodes.
+        case ALT_TAB:
+            if (record->event.pressed) {
+                if (!is_alt_tab_active) {
+                    is_alt_tab_active = true;
+                    register_code(KC_LGUI);
+                }
+                alt_tab_timer = timer_read();
+                register_code(KC_TAB);
+            } else {
+                unregister_code(KC_TAB);
+            }
+            break;
+    }
+    return true;
+}
+
+void matrix_scan_user(void) {
+    if (is_alt_tab_active && timer_elapsed(alt_tab_timer) > 1000) {
+        unregister_code(KC_LGUI);
+        is_alt_tab_active = false;
+    }
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
             KC_MUTE,

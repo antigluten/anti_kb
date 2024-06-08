@@ -146,7 +146,7 @@
             [
                 "KC_TRNS",
                 "KC_PGUP",
-                "KC_PGDOWN"
+                "LSFT_T(KC_PGDOWN)"
             ],
             [
                 "KC_TRNS",
@@ -173,17 +173,17 @@
             [
                 "M1",
                 "M8",
-                "KC_TRNS"
+                "M11"
             ],
             [
                 "M0",
                 "M5",
-                "KC_TRNS"
+                "M10"
             ],
             [
                 "M2",
                 "M6",
-                "KC_TRNS"
+                "M9"
             ],
             [
                 "KC_TRNS",
@@ -663,9 +663,48 @@
                 "KC_LGUI"
             ]
         ],
-        [],
-        [],
-        [],
+        [
+            [
+                "down",
+                "KC_LGUI"
+            ],
+            [
+                "tap",
+                "KC_B"
+            ],
+            [
+                "up",
+                "KC_LGUI"
+            ]
+        ],
+        [
+            [
+                "down",
+                "KC_LGUI"
+            ],
+            [
+                "tap",
+                "KC_R"
+            ],
+            [
+                "up",
+                "KC_LGUI"
+            ]
+        ],
+        [
+            [
+                "down",
+                "KC_LGUI"
+            ],
+            [
+                "tap",
+                "KC_O"
+            ],
+            [
+                "up",
+                "KC_LGUI"
+            ]
+        ],
         [],
         [],
         [],
@@ -1253,11 +1292,11 @@
             "USER00"
         ],
         [
+            "KC_LEFT",
+            "KC_UP",
             "KC_NO",
             "KC_NO",
-            "KC_NO",
-            "KC_NO",
-            "KC_NO"
+            "KC_BSPACE"
         ],
         [
             "KC_NO",

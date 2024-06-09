@@ -1299,18 +1299,18 @@
             "KC_BSPACE"
         ],
         [
+            "KC_HOME",
+            "KC_LEFT",
             "KC_NO",
             "KC_NO",
-            "KC_NO",
-            "KC_NO",
-            "KC_NO"
+            "KC_ENTER"
         ],
         [
-            "KC_NO",
-            "KC_NO",
-            "KC_NO",
-            "KC_NO",
-            "KC_NO"
+            "KC_LEFT",
+            "KC_DOWN",
+            "KC_RIGHT",
+            "LSFT_T(KC_PGDOWN)",
+            "KC_SPACE"
         ],
         [
             "KC_NO",
